@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<visualizationDefinition version="3.1" xmlns="http://www.ibm.com/xmlns/prod/ba/vipr/vizBundle/vizdef.3">
+  <slots>
+    <slot name="wkt" caption="$nls.slot_wkt" description="$nls.slot_wkt" type="cat" optional="false" />
+    <slot name="color" caption="$nls.slot_color" description="$nls.slot_color_description" type="cat" optional="true" channel="color"/>
+  </slots>
+  <dataSets>
+    <dataSet>
+        <ref slot="wkt" />
+        <ref slot="color" />
+    </dataSet>
+  </dataSets>
+  <properties>
+    <enum name="basemapname" caption="BaseMap" description="type of basemap" default="openstreetmap" >
+      <possibleValue caption="None">None</possibleValue>
+      <possibleValue caption="openstreetmap">OpenStreetMap</possibleValue>
+      <possibleValue caption="ESRI National Geographic">ESRINationalGeographic</possibleValue>
+      <possibleValue caption="ESRI World Topo Map">ESRIWorldTopoMap</possibleValue>
+    </enum>
+    <palette name="color" caption="Colors" slot="color" />
+  </properties>
+</visualizationDefinition>

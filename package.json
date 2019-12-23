@@ -1,0 +1,81 @@
+{
+  "name": "ext-vis-leaflet",
+  "version": "0.0.1",
+  "description": "Leaflet maps visualisation for Cognos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batje/extFavoritesButton.git"
+  },
+  "dependencies": {
+    "@businessanalytics/customvis-lib": "file:customvis-lib.tgz",
+    "leaflet": "^1.6.0"
+  },
+  "meta": {
+    "name": "Leaflet",
+    "id": "nl.mountbatten.vis.leaflet",
+    "type": "renderer",
+    "version": "1.0",
+    "description": "Leaflet Maps Visualisation",
+    "icon": "icon.svg"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "git add README.md ; node_modules/.bin/lint-staged",
+    "release": "standard-version"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "node_modules/.bin/prettier --write --single-quote",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "git add README.md ; node_modules/.bin/lint-staged"
+    }
+  },
+  "keywords": [
+    "cognos",
+    "favorites",
+    "extention"
+  ],
+  "author": "Reinier Battenberg",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/batje/extFavoritesButton/issues"
+  },
+  "homepage": "https://github.com/batje/extFavoritesButton#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "standard-version": "^7.0.1",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-do-expressions": "^7.7.4",
+    "@babel/plugin-proposal-export-default-from": "^7.7.4",
+    "@babel/plugin-proposal-function-bind": "^7.7.4",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.7.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/plugin-proposal-pipeline-operator": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-stage-0": "^7.0.0",
+    "@rollup/plugin-json": "^4.0.1",
+    "i": "^0.3.6",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-minify-es": "^1.1.1",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-notify": "^1.1.0",
+    "rollup-plugin-progress": "^1.1.1",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
+}
